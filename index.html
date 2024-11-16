@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Breast Cancer Prediction</h1>
+        <form id="predictForm">
+            <h2>Enter Your Details</h2>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="number" id="age" placeholder="Enter your age" required>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <h2>Medical Parameters</h2>
+            <input type="number" id="radius" placeholder="Radius Mean" step="0.01" required>
+            <input type="number" id="texture" placeholder="Texture Mean" step="0.01" required>
+            <input type="number" id="area" placeholder="Area Mean" step="0.01" required>
+            <button type="button" id="predictBtn">Predict</button>
+        </form>
+        <div id="result"></div>
+        <div id="chartContainer">
+            <canvas id="parameterChart"></canvas>
+        </div>
+        <button id="downloadReportBtn" style="display: none;">Download Report</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
